@@ -2,9 +2,18 @@ require 'test_helper'
 
 class ProductsControllerTest < ActionController::TestCase
   setup do
-    @product = products(:one)
-  end
-
+      @product = products(:one)
+      @update = {
+      :title => 'Lorem Ipsum',
+      :description => 'Wibbles are fun!',
+      :image_url => 'lorem.jpg',
+      :price => 19.95
+      }
+          :title          => 'Lorem Ipsum',
+          :description    => 'Wibbles are fun!',
+          :image_url      => 'lorem.jpg',
+          :price          => 19.95
+  }
   test "should get index" do
     get :index
     assert_response :success
