@@ -9,11 +9,7 @@ class ProductsControllerTest < ActionController::TestCase
       :image_url => 'lorem.jpg',
       :price => 19.95
       }
-          :title          => 'Lorem Ipsum',
-          :description    => 'Wibbles are fun!',
-          :image_url      => 'lorem.jpg',
-          :price          => 19.95
-  }
+  end    
   test "should get index" do
     get :index
     assert_response :success
@@ -55,4 +51,5 @@ class ProductsControllerTest < ActionController::TestCase
 
     assert_redirected_to products_path
   end
+  
 end
